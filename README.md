@@ -1,150 +1,189 @@
-# 🚖 Ride-Hailing Data Analysis  
-**SQL • Data Warehouse Design • Power BI (Planned)**
-
----
-
 ## 📌 Project Overview
 
-This project focuses on analyzing ride-hailing booking data using **SQL** and **data warehousing principles** to extract meaningful business insights related to customer behavior, cancellations, and booking patterns.
+🚖 **Ride-Hailing Data Analysis** is an end-to-end analytics project focused on transforming **synthetic ride-hailing data** into a **clean, well-structured data warehouse** and extracting **meaningful business insights** using SQL and data visualization.
 
-Instead of performing analysis on a flat dataset, the project emphasizes **designing a data warehouse from scratch**, transforming raw transactional data into a structured **fact and dimension model**. This approach closely reflects real-world analytics workflows used in reporting and business intelligence environments 📊.
+The dataset used in this project is **simulated** and designed to resemble real-world ride-hailing operations. While the numerical values do not represent an actual company, the **data modeling, analytical logic, and analytical workflow reflect real production analytics practices**.
 
----
+Throughout the project, the role of a data analyst is simulated by:
+- Designing a **scalable star schema** suitable for analytical workloads  
+- Cleaning and structuring data to ensure **data consistency and integrity**  
+- Answering **business-driven questions** related to ride activity and cancellations  
+- Communicating insights clearly through **SQL-based analysis and dashboards**
 
-## 🎯 Project Objective
+📊 The primary objective of this project is to demonstrate **strong analytical thinking and technical execution**, rather than to report real operational metrics.
 
-The primary objective of this project is to:
+## 🏢 Business Context
 
-- 🧱 Design a **star-schema data warehouse** from a single raw table  
-- 🧠 Strengthen understanding of **fact vs dimension tables**  
-- 🧹 Apply **SQL-based data cleaning and transformation**  
-- 📈 Calculate key **business KPIs and behavioral metrics**  
-- 🚀 Prepare an analytics-ready dataset for **Power BI dashboards**
+Ride-hailing platforms operate in a highly competitive environment where
+**operational efficiency, customer satisfaction, and driver availability**
+directly affect overall business performance.
 
-Although the dataset size is modest, the focus of this project is on **architecture, logic, and analytical thinking**, rather than volume.
+Analyzing ride-level data enables stakeholders to:
+- Monitor platform usage and ride demand
+- Understand cancellation behavior and its impact on service reliability
+- Distinguish between customer-driven and driver-driven operational issues
+- Support data-driven decisions aimed at improving service quality
 
----
-
-## 🗂 Dataset Description
-
-- **Source:** :contentReference[oaicite:0]{index=0}  
-- **Original Structure:**  
-  - One flat transactional table  
-  - ~150,000 rows  
-- **Domain:** Ride-hailing / transportation bookings  
-
-The dataset was intentionally reshaped to simulate a **production-style analytical database**.
-
----
-
-## 🏗 Data Warehouse Design
-
-The raw dataset was transformed into a **star schema** consisting of:
-
-### 📊 Fact Table
-- **fact_booking**  
-  - Contains booking-level transactional data  
-  - Acts as the central table for analysis  
-
-### 📐 Dimension Tables
-- **dim_date**  
-- **dim_location**  
-- **dim_customer**  
-- **dim_vehicle**  
-- **dim_cancel_reason**  
-- **dim_payment_method**
-
-This design enables:
-- Efficient joins  
-- Flexible slicing and filtering  
-- Clear separation between metrics and descriptive attributes  
-
-> ⚠️ **ERD Status**  
-> An Entity Relationship Diagram (ERD) is planned and will be added in a future update.
-
----
-
-## 🧹 Data Cleaning & Transformation (SQL)
-
-All data preparation was performed using SQL, including:
-
-- Handling **NULL values**
-- Splitting raw attributes into **dimension tables**
-- Applying **INNER JOIN** and **LEFT JOIN** logic based on business requirements
-- Ensuring **referential integrity** between fact and dimensions
-- Filtering data using business-driven conditions
-
-This process resulted in a **clean, analysis-ready data model**.
-
----
-
-## 📈 Exploratory Data Analysis (SQL)
-
-SQL was used extensively to explore and analyze booking behavior through:
-
-- Aggregations using `COUNT`, `SUM`, and `AVG`
-- Conditional logic for behavioral analysis
-- Calculation of **rates and percentages** for KPIs
-- Grouping and filtering to answer business questions
-
-All queries are organized and written with **readability and reusability** in mind.
-
----
-
-## 📊 Key Metrics & KPIs
-
-Examples of metrics calculated include:
-
-- Customer vs driver cancellation rates  
-- Distribution of cancellation reasons  
-- Booking behavior patterns  
-- Percentage-based behavioral indicators  
-
-> 🔍 A dedicated **Business Questions & Answers** section (≈16 questions) will be added and documented in detail.
-
----
-## 📊 Business Questions & Insights
-
-This section presents the key business questions answered using SQL.
-Each question includes the business context and the exact SQL query used in the analysis.
-
----
-
-### Q1. How many total rides were completed?
-
-**Why it matters:**  
-Completed rides represent successful transactions and form the basis for all revenue analysis.
-
-<details>
-<summary><strong>SQL Query</strong></summary>
-
-```sql
-SELECT COUNT(*) AS total_completed_rides
-FROM fact_bookings
-WHERE booking_status = 'Completed';
-</details> ```
+This project represents a common real-world analytics scenario where
+structured data analysis is used to transform raw operational data into
+**actionable insights** for business and operations teams.
 
 
-## 📉 Power BI Visualization (Planned)
+## 🎯 Project Objectives
 
-Power BI will be used to:
+The objective of this project is to showcase a **professional data analytics workflow**
+that reflects real-world analytical and reporting tasks.
 
-- Build interactive dashboards  
-- Visualize KPIs and trends  
-- Translate SQL results into business insights  
+The project focuses on the following goals:
+- Design a **clean and scalable data warehouse** using a star schema approach  
+- Convert raw ride-hailing data into a **structured analytical model**  
+- Apply SQL to answer **business-oriented analytical questions**  
+- Analyze ride activity and cancellation behavior to identify meaningful patterns  
+- Communicate insights effectively through **clear metrics and dashboards**
 
-> ⏳ This section will be completed after finishing Power BI learning.
+Rather than emphasizing real operational results, the project prioritizes
+**analytical reasoning, data modeling principles, and technical execution**.
 
----
+## 📊 Dataset Description
 
-## 🛠 Tools & Technologies
+The dataset used in this project is **synthetic** and was created to simulate
+real-world ride-hailing operations for analytical and educational purposes.
 
-- :contentReference[oaicite:1]{index=1} — SQL querying & data transformation  
-- :contentReference[oaicite:2]{index=2} — Learning support & query refinement  
-- ERD — *Planned*  
-- :contentReference[oaicite:3]{index=3} — *Planned*
+It represents ride-level booking data and includes information related to:
+- Ride status and trip details  
+- Customers and drivers  
+- Vehicle types and payment methods  
+- Ride cancellations and cancellation reasons  
+- Ratings and time-based metrics  
 
----
+Although the numerical values do not correspond to an actual ride-hailing
+company, the dataset is **internally consistent** and structured to support
+realistic data modeling, SQL analysis, and business intelligence workflows.
 
-## 📁 Project Structure
+## 🏗️ Data Warehouse Design
 
+The project follows a **star schema** design to support efficient analytical
+queries and clear separation between transactional events and descriptive
+attributes.
+
+A central **fact table** captures ride-level events, while multiple
+**dimension tables** provide contextual information such as customer details,
+driver attributes, time, and cancellation reasons.
+
+This design approach:
+- Simplifies analytical queries
+- Improves query performance
+- Supports scalability for future metrics and dimensions
+- Aligns with industry-standard analytical modeling practices
+
+## 🧩 Entity Relationship Diagram (ERD)
+
+The Entity Relationship Diagram (ERD) illustrates how the fact table connects
+to its associated dimension tables through surrogate keys.
+
+The model enforces clear relationships between rides, customers, drivers,
+dates, and cancellation reasons, ensuring **data integrity** and enabling
+flexible, multi-dimensional analysis.
+
+The ERD serves as a visual representation of the analytical data model used
+throughout the project.
+
+## 🧹 Data Cleaning & Preparation
+
+Before analysis, the data was reviewed and prepared to ensure consistency
+and analytical reliability. Key preparation steps included:
+
+- Standardizing date and time fields
+- Validating ride status and cancellation logic
+- Ensuring consistency between ride outcomes and cancellation reasons
+- Handling missing or non-applicable values appropriately
+- Aligning fact and dimension tables to maintain referential integrity
+
+These steps ensure that the analytical results are based on **clean and
+logically consistent data**.
+
+## ❓ Business Questions
+
+The analysis aims to answer several business-relevant questions, including:
+
+1. What is the overall volume of ride activity on the platform?
+2. What proportion of rides are canceled?
+3. How do customer-initiated cancellations compare to driver-initiated cancellations?
+4. Are there noticeable patterns in cancellations over time?
+5. How does ride activity vary across different vehicle types?
+
+These questions reflect common analytical requirements used to evaluate
+platform performance and operational behavior.
+
+## 🧠 Analytical Approach
+
+SQL was used as the primary analytical tool to explore and analyze the data.
+The analysis involved:
+
+- Joining fact and dimension tables to enrich ride-level data
+- Applying aggregations to calculate key metrics
+- Filtering and grouping data to compare behaviors across categories
+- Using structured and readable queries to ensure clarity and maintainability
+
+This approach mirrors how analysts typically work with data warehouses
+in real-world environments.
+
+## 📌 Key Insights & Findings
+
+The analysis revealed several notable patterns:
+
+- Ride cancellations represent a significant portion of total ride activity
+- Customer-initiated and driver-initiated cancellations exhibit different
+  behavioral characteristics
+- Cancellation activity varies across time periods, indicating potential
+  demand or supply-side patterns
+- Certain vehicle types show differing levels of ride activity and stability
+
+These insights demonstrate how structured data analysis can support
+operational understanding and decision-making.
+
+## 📈 Visualization & Dashboard Overview
+
+A Power BI dashboard was developed to visually communicate key metrics and
+analytical findings.
+
+The dashboard provides:
+- An overview of total rides and cancellation rates
+- A breakdown of cancellations by type
+- Time-based trends and comparisons
+- Interactive visuals designed for stakeholder interpretation
+
+The visualization layer complements the SQL analysis by transforming
+results into **clear and actionable insights**.
+
+## 🛠️ Tools & Technologies
+
+The project was developed using the following tools and technologies:
+
+- **SQL (PostgreSQL)** for data modeling, transformation, and analysis
+- **Power BI** for data visualization and dashboard creation
+- **Git & GitHub** for version control and project publishing
+- **ERD design tools** for data model visualization
+
+## ⚠️ Limitations & Assumptions
+
+- The dataset used in this project is **synthetic** and does not represent
+  real operational data
+- Insights are illustrative and intended to demonstrate analytical logic
+  rather than actual business performance
+- Some real-world complexities, such as live pricing or dynamic driver
+  availability, are not modeled
+
+These limitations are acknowledged to ensure transparency and proper
+interpretation of the results.
+
+## 🧠 Skills Demonstrated
+
+This project demonstrates the following skills:
+
+- Data warehouse design and star schema modeling
+- SQL querying, joins, aggregations, and filtering
+- Data cleaning and validation techniques
+- Business-focused analytical thinking
+- Data visualization and insight communication
+- Professional documentation and project structuring
