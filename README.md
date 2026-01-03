@@ -1,16 +1,22 @@
 ## 📌 Project Overview
 
-🚖 **Ride-Hailing Data Analysis** is an end-to-end analytics project focused on transforming **synthetic ride-hailing data** into a **clean, well-structured data warehouse** and extracting **meaningful business insights** using SQL and data visualization.
+🚖 **Ride-Hailing Data Analysis** is an end-to-end analytics project focused on
+designing a **structured analytical data model** and exploring ride-hailing
+behavior using SQL and data visualization.
 
-The dataset used in this project is **simulated** and designed to resemble real-world ride-hailing operations. While the numerical values do not represent an actual company, the **data modeling, analytical logic, and analytical workflow reflect real production analytics practices**.
+The dataset used in this project is **synthetic** and intended to simulate
+real-world ride-hailing operations. As with many analytical projects, the data
+model represents **one possible interpretation of the underlying business
+processes**, rather than a definitive source of truth.
 
-Throughout the project, the role of a data analyst is simulated by:
-- Designing a **scalable star schema** suitable for analytical workloads  
-- Cleaning and structuring data to ensure **data consistency and integrity**  
-- Answering **business-driven questions** related to ride activity and cancellations  
-- Communicating insights clearly through **SQL-based analysis and dashboards**
+The project emphasizes:
+- Analytical data modeling and grain definition  
+- Writing SQL queries that aim to minimize logical errors and false results  
+- Exploring how modeling decisions influence analytical outcomes  
+- Communicating insights while acknowledging assumptions and limitations  
 
-📊 The primary objective of this project is to demonstrate **strong analytical thinking and technical execution**, rather than to report real operational metrics.
+📊 The primary goal is to demonstrate **analytical reasoning and modeling
+discipline**, rather than to report exact real-world metrics.
 
 ## 🏢 Business Context
 
@@ -62,21 +68,22 @@ realistic data modeling, SQL analysis, and business intelligence workflows.
 
 ## 🏗️ Data Warehouse Design
 
-The project follows a **star schema** design to support efficient analytical
-queries and clear separation between transactional events and descriptive
-attributes.
+The project uses a **star schema-inspired design** to support analytical
+queries. A central fact table represents ride-level events, while dimension
+tables provide descriptive context.
 
-A central **fact table** captures ride-level events, while multiple
-**dimension tables** provide contextual information such as customer details,
-driver attributes, time, and cancellation reasons.
+It is important to note that this data model reflects **design choices made
+for analytical clarity**, not an exact replica of a production ride-hailing
+system. Decisions such as grain definition, dimension boundaries, and
+cancellation representation directly influence the resulting metrics.
 
-This design approach:
-- Simplifies analytical queries
-- Improves query performance
-- Supports scalability for future metrics and dimensions
-- Aligns with industry-standard analytical modeling practices
+This section intentionally highlights modeling decisions as **analytical
+assumptions**, reinforcing that:
+- Different modeling approaches may lead to different results
+- Query correctness depends on understanding the underlying grain
+- Data models are analytical tools, not absolute truth
 
-## 🧩 Entity Relationship Diagram (ERD)
+## 🧩 Entity Relationship Diagram (ERD) (Need to added later)
 
 The Entity Relationship Diagram (ERD) illustrates how the fact table connects
 to its associated dimension tables through surrogate keys.
@@ -90,17 +97,17 @@ throughout the project.
 
 ## 🧹 Data Cleaning & Preparation
 
-Before analysis, the data was reviewed and prepared to ensure consistency
-and analytical reliability. Key preparation steps included:
+Data preparation focused on making the dataset **analytically usable and
+logically consistent** within the chosen data model.
 
-- Standardizing date and time fields
-- Validating ride status and cancellation logic
-- Ensuring consistency between ride outcomes and cancellation reasons
-- Handling missing or non-applicable values appropriately
-- Aligning fact and dimension tables to maintain referential integrity
+Key steps included:
+- Reviewing ride status and cancellation fields for logical alignment  
+- Standardizing time-related fields for aggregation and comparison  
+- Ensuring that cancellation reasons align with cancellation outcomes  
+- Handling missing or non-applicable values based on modeling assumptions  
 
-These steps ensure that the analytical results are based on **clean and
-logically consistent data**.
+These steps do not eliminate all ambiguity, but aim to **reduce obvious sources
+of analytical error** within the scope of the project.
 
 ## ❓ Business Questions
 
@@ -117,32 +124,33 @@ platform performance and operational behavior.
 
 ## 🧠 Analytical Approach
 
-SQL was used as the primary analytical tool to explore and analyze the data.
-The analysis involved:
+The analysis was conducted using SQL, with particular attention to
+**join logic, filtering conditions, and aggregation grain**.
 
-- Joining fact and dimension tables to enrich ride-level data
-- Applying aggregations to calculate key metrics
-- Filtering and grouping data to compare behaviors across categories
-- Using structured and readable queries to ensure clarity and maintainability
+Rather than focusing solely on query execution, the analytical process
+emphasized:
+- Evaluating whether query results were logically consistent  
+- Identifying scenarios where technically correct queries could produce
+  misleading results  
+- Understanding how join types and filters affect final metrics  
 
-This approach mirrors how analysts typically work with data warehouses
-in real-world environments.
+This approach reflects real-world analytical challenges, where validating
+results is as important as writing functional queries.
 
 ## 📌 Key Insights & Findings
 
-The analysis revealed several notable patterns:
+Based on the current data model and analytical assumptions, the analysis
+suggests several patterns:
 
-- Ride cancellations represent a significant portion of total ride activity
+- Ride cancellations represent a noticeable share of overall ride activity  
 - Customer-initiated and driver-initiated cancellations exhibit different
-  behavioral characteristics
-- Cancellation activity varies across time periods, indicating potential
-  demand or supply-side patterns
-- Certain vehicle types show differing levels of ride activity and stability
+  behavioral characteristics  
+- Cancellation behavior varies across time periods and ride categories  
 
-These insights demonstrate how structured data analysis can support
-operational understanding and decision-making.
+These findings should be interpreted as **model-dependent insights**, intended
+to demonstrate analytical reasoning rather than definitive operational truth.
 
-## 📈 Visualization & Dashboard Overview
+## 📈 Visualization & Dashboard Overview (Need to added later)
 
 A Power BI dashboard was developed to visually communicate key metrics and
 analytical findings.
@@ -167,15 +175,15 @@ The project was developed using the following tools and technologies:
 
 ## ⚠️ Limitations & Assumptions
 
-- The dataset used in this project is **synthetic** and does not represent
-  real operational data
-- Insights are illustrative and intended to demonstrate analytical logic
-  rather than actual business performance
-- Some real-world complexities, such as live pricing or dynamic driver
-  availability, are not modeled
+- The dataset is **synthetic** and does not represent real operational data  
+- The analytical data model reflects **design assumptions** made for learning
+  and clarity  
+- Certain real-world complexities (e.g., event-based ride lifecycle,
+  late-arriving data, operational corrections) are not modeled  
+- Results are sensitive to modeling and filtering choices  
 
-These limitations are acknowledged to ensure transparency and proper
-interpretation of the results.
+These limitations are explicitly acknowledged to emphasize that analytical
+outputs depend on **how the data is modeled and interpreted**.
 
 ## 🧠 Skills Demonstrated
 
