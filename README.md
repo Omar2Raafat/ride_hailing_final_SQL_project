@@ -195,3 +195,27 @@ This project demonstrates the following skills:
 - Business-focused analytical thinking
 - Data visualization and insight communication
 - Professional documentation and project structuring
+
+## 📂 Project Files & SQL Navigation
+
+The SQL logic in this project is organized to reflect a clear analytical
+workflow, moving from raw data preparation to final analysis:
+
+- `/SQL/01_Raw_tables.sql`  
+  Contains the raw table structures representing the initial form of the
+  dataset before transformation.
+
+- `/SQL/02_stg_tables.sql`  
+  Includes staging tables used to clean, standardize, and prepare data for
+  analytical modeling.
+
+- `/SQL/03_Star_schema.sql`  
+  Defines the analytical data model using a star schema, including fact and
+  dimension tables.
+
+- `/SQL/04_Analysis.sql`  
+  Contains SQL queries used to answer the business questions and generate
+  analytical insights.
+
+This structure mirrors common data warehouse and analytics workflows, where
+data is progressively refined from raw ingestion to analysis-ready models.
